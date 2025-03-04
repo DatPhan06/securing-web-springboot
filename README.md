@@ -71,22 +71,34 @@ This project is a demo application showcasing the integration of Spring Boot 3 w
 
 ## Demo
 
-### Add New User
+### Welcome Page
 
-![Add New User](demo/src/main/resources/img/AddUser.png)
+![UserProfile.png](demo\src\main\resources\img\WelcomePage.png)
 
-### Generate Token
+### Register a New User
 
-![Generate Token](demo/src/main/resources/img/GenerateToken.png)
+![Register.png](demo\src\main\resources\img\Register.png)
 
-### User Welcome Page With JWT
+### Login and Get JWT Token
 
-![User Profile](demo/src/main/resources/img/UserWelcomeJWT.png)
+![Login.png](demo\src\main\resources\img\Login.png)
 
-### Welcome Page Without JWT
+### User Profile
 
-![Admin Profile](demo/src/main/resources/img/WelcomePageNoJWT.png)
+![UserProfile.png](demo/src/main/resources/img/UserProfilewithJWT.png)
 
-### Cannot Access Admin Welcome Page Without JWT
+### Account List with JWT 
 
-![Admin Profile](demo/src/main/resources/img/WelcomePageNoJWT.png)
+![AdminProfile.png](demo/src/main/resources/img/AccountListWithAdminJWT.png)
+
+### Update Account with JWT
+
+![AdminProfile.png](demo/src/main/resources/img/UpdateAccount.png)
+
+### Delete Account with JWT
+
+![AdminProfile.png](demo/src/main/resources/img/DeleteAccount.png)
+
+
+
+

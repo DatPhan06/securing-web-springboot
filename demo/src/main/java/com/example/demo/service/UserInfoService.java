@@ -40,4 +40,28 @@ public class UserInfoService implements UserDetailsService {
     public List<UserInfo> getAllUsers() {
         return repository.findAll();
     }
+
+    public String updateUser(int id, UserInfo userInfo) {
+        Optional<UserInfo> existingUser = repository.findById(id);
+        if (existingUser.isPresent()) {
+            UserInfo userToUpdate = existingUser.get();
+            userToUpdate.setName(userInfo.getName());
+            userToUpdate.setEmail(userInfo.getEmail());
+            userToUpdate.setPassword(encoder.encode(userInfo.getPassword()));
+            userToUpdate.setRoles(userInfo.getRoles());
+            repository.save(userToUpdate);
+            return "User Updated Successfully";
+        } else {
+            return "User Not Found";
+        }
+    }
+
+    public String deleteUser(int id) {
+        if (repository.existsById(id)) {
+            repository.deleteById(id);
+            return "User Deleted Successfully";
+        } else {
+            return "User Not Found";
+        }
+    }
 }

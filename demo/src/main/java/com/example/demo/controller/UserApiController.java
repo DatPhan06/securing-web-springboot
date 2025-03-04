@@ -10,6 +10,6 @@ public class UserApiController {
     @PreAuthorize("hasAuthority('ROLE_USER')")
     @GetMapping("/profile")
     public String getUserProfile() {
-        return "User profile information.";
+        return "Hello User Page With JWT";
     }
 }

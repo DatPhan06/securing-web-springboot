@@ -59,15 +59,29 @@ This project is a demo application showcasing the integration of Spring Boot 3 w
 
 ### API Endpoints
 
-- `POST /auth/addNewUser` - Register a new user
-- `POST /auth/generateToken` - Authenticate and get a JWT token
-- `GET /auth/welcome` - Public endpoint
-- `GET /auth/user/userProfile` - User profile (requires ROLE_USER)
-- `GET /auth/admin/adminProfile` - Admin profile (requires ROLE_ADMIN)
-- `POST /api/admin/create` - Create a new resource (requires ROLE_ADMIN)
-- `PUT /api/admin/update` - Update a resource (requires ROLE_ADMIN)
-- `DELETE /api/admin/delete` - Delete a resource (requires ROLE_ADMIN)
-- `GET /api/user/profile` - Get user profile information (requires ROLE_USER)
+#### Authentication and Authorization
+
+- POST /api/auth/register - Register a new user
+- POST /api/auth/login - Authenticate and get a JWT token
+- GET /api/auth/welcome - Public endpoint
+
+#### User Endpoints
+
+- GET /api/user/profile - User profile (requires ROLE_USER)
+
+#### Admin Endpoints
+
+- GET /api/admin/profile - Admin profile (requires ROLE_ADMIN)
+- POST /api/admin/resources - Create a new resource (requires ROLE_ADMIN)
+- PUT /api/admin/resources/{id} - Update a resource (requires ROLE_ADMIN)
+- DELETE /api/admin/resources/{id} - Delete a resource (requires ROLE_ADMIN)
+
+#### Account Management Endpoints
+
+- GET /api/accounts - Get all user accounts (requires ROLE_ADMIN)
+- POST /api/accounts - Add a new user account (requires ROLE_ADMIN)
+- PUT /api/accounts/{id} - Update a user account (requires ROLE_ADMIN)
+- DELETE /api/accounts/{id} - Delete a user account (requires ROLE_ADMIN)
 
 ## Demo
 
@@ -87,7 +101,7 @@ This project is a demo application showcasing the integration of Spring Boot 3 w
 
 ![UserProfile.png](demo/src/main/resources/img/UserProfilewithJWT.png)
 
-### Account List with JWT 
+### Account List with JWT
 
 ![AdminProfile.png](demo/src/main/resources/img/AccountListWithAdminJWT.png)
 
@@ -98,7 +112,3 @@ This project is a demo application showcasing the integration of Spring Boot 3 w
 ### Delete Account with JWT
 
 ![AdminProfile.png](demo/src/main/resources/img/DeleteAccount.png)
-
-
-
-
